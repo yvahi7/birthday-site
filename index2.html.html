@@ -478,6 +478,26 @@
         // Initialize progress bar
         updateProgressBar();
     </script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    function showStep(n) {
+      document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
+      const el = document.getElementById('step' + n);
+      if (el) el.classList.add('active');
+    }
+
+    const params = new URL(window.location.href).searchParams;
+    const step = params.get('start');
+
+    if (step) {
+      showStep(Number(step));  // show Step 2 when ?start=2
+    } else {
+      showStep(1); // default
+    }
+  });
+</script>
+
 </body>
+
 
 </html>
