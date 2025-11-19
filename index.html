@@ -123,7 +123,7 @@
 
 
         <div class="boxMail">
-            <i class="fa-solid fa-xmark"></i>
+            <i class="fa-solid fa-xmark redcard-close"></i>
             <div class="boxMail-container">
                 <div class="card1">
                     <div class="userImg">
@@ -156,8 +156,20 @@
             </div>
         </div>
     </div>
-
-  
+<!-- NEXT link (hidden until red card closes) -->
+<div id="next-link" style="display:none; text-align:center; margin:40px 0;">
+  <a id="next-link-a" href="index2.html?start=2"
+     style="background:linear-gradient(135deg,#ec4899,#f43f5e);
+            color:white;
+            padding:15px 35px;
+            border-radius:40px;
+            font-size:20px;
+            font-weight:600;
+            text-decoration:none; display:inline-block;">
+    NEXT ➜
+  </a>
+</div>
+ 
 </body>
 <script>
     let datetxt = "27 May";
@@ -259,6 +271,18 @@
     close.addEventListener('click', function () {
         boxmail.classList.remove('active')
     })
+</script>
+<!-- SHOW NEXT BUTTON AFTER RED CARD CLOSE -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const closeBtn = document.querySelector('.redcard-close') || document.querySelector('.fa-xmark');
+    const next = document.getElementById('next-link');
+    if (closeBtn && next) {
+      closeBtn.addEventListener('click', function() {
+        next.style.display = 'block';
+      });
+    }
+  });
 </script>
 
 </html>
