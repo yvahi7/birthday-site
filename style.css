@@ -465,16 +465,14 @@ body {
     z-index: 10;
     display: none;
 }
-/* UPDATED: larger letter modal */
 .box__letter .letter__border{
     position: absolute;
-    width: 70vw;        /* was 55vw */
-    max-width: 1100px;  /* cap for very wide screens */
-    height: 620px;      /* was 450px */
+    width: 55vw;
+    height: 450px;
     background-color: var(--color-white);
     border-radius: 27px;
-    padding: 22px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 6px 18px;
+    padding: 17px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
@@ -499,13 +497,17 @@ body {
     height: 100%;
     background-color: var(--color-bg-letter);
     border-radius: 10px;
-    padding-top: 24px; /* slightly increased */
+    padding-top: 15px;
 }
 .letter__border .letter .title__letter{
     text-align: center;
     font-family: 'Dancing Script', cursive;
     font-weight: bold;
-    font-size: 2.8rem; /* increased */
+    font-size: 2.4rem;
+}
+.title__letter .fa-solid{
+    margin-left: 5px;
+    font-size: 1.3rem;
 }
 .letter__border .letter .content__letter{
     position: relative;
@@ -793,23 +795,11 @@ body {
     }
 
 
-    /* MOBILE ADJUSTMENTS FOR LARGER MODAL & CARDS */
-    .boxMail .boxMail-container {
-        width: 92vw;   /* fluid width on mobile */
-        height: 420px; /* scaled down height */
-    }
-    .boxMail .boxMail-container .card1,
-    .boxMail .boxMail-container .card2 {
-        width: 100%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-    .box__letter .letter__border {
-        width: 94vw;  /* keep modal nearly full width on mobile */
-        height: 340px; /* matches mobile modal height */
-    }
-
 }
+
+
+
+
 
 
 
@@ -833,21 +823,23 @@ body {
     visibility: visible;
     transform: scale(1);
 }
-/* UPDATED: larger 3D mail container */
 .boxMail .boxMail-container{
     position: absolute;
-    width: 900px;   /* was 750px */
-    height: 600px;  /* was 500px */
+    width: 750px;
+    height: 500px;
     display: flex;
     margin: 0;
     transform: scale(0.9);
-    -webkit-perspective: 2400px; /* slightly increased perspective for larger size */
-    perspective: 2400px;
+    -webkit-perspective: 2000px;
+    perspective: 2000px;
     transition: all 0.5s;
 }
 .boxMail .boxMail-container:hover{
     transform: rotate(-5deg);
     filter: drop-shadow(0 0 10px #FF7882);
+}
+.boxMail .boxMail-container:hover .card1{
+    transform: translate(-187px, -250px) rotateY(-140deg);
 }
 .boxMail .boxMail-container .card1,
 .boxMail .boxMail-container .card2{
@@ -859,10 +851,9 @@ body {
     transform: translate(-50%, -50%);
     border: 1px solid black;
 }
-
-/* make each half occupy half of the larger container but allow slight overlap */
 .boxMail .boxMail-container .card1 {
-    width: 55%;   /* was 50% */
+    position: absolute;
+    width: 50%;
     height: 100%;
     background: linear-gradient(to right, #FF7882, #FF7882 63%);
     color: white;
@@ -870,26 +861,8 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    z-index: 2;
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    transform-origin: left;
-    transition: all 1s ease-in-out;
 }
-
-/* bigger right/back card, nudged right */
-.boxMail .boxMail-container .card2{
-    width: 55%;   /* was 50% */
-    height: 100%;
-    left: calc(50% + 10%); /* nudge to the right so cards spread nicely */
-    background: linear-gradient(to right, #e0e0e0, #ffffff 30%);
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    transform-origin: left;
-    transition: all 1s;
-}
-
-.boxMail .boxMail-container .card1 {
+.boxMail-container .card1{
     z-index: 1;
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
@@ -954,12 +927,12 @@ body {
     padding: 20px 0px 10px 60px;
     opacity: 0;
     visibility: hidden;
-    font-size: 20px;
+    font-size: 25px;
     text-shadow: 0 0 8px #FF7882;
 }
 .boxMail .boxMail-container .card2:hover h3{
-    animation: texth3 1s forwards;
-    animation-delay: 1s;
+    animation: texth3 3s forwards;
+    animation-delay: 2s;
     transition: 1s;
 }
 @keyframes texth3{
@@ -978,12 +951,12 @@ body {
     font-family: 'Dancing Script', cursive;
     padding: 0px 20px;
     text-indent: 20px;
-    font-size: 22px;
+    font-size: 18px;
     opacity: 0;
 }
 .boxMail .boxMail-container .card2:hover h2{
-    animation: texth2 2s forwards;
-    animation-delay: 4s;
+    animation: texth2 1s forwards;
+    animation-delay: 2s;
     transition: 1s;
 }
 @keyframes texth2{
@@ -1044,7 +1017,7 @@ body {
     position: fixed;
     top: 0;
     right: 0;
-    font-size: 30px;
+    font-size: 20px;
     padding: 10px 25px;
     cursor: pointer;
     color: white;
@@ -1053,7 +1026,7 @@ body {
 .next-btn {
   position: absolute;
   right: 20px;
-  bottom: 20px;
+  bottom: 24px;
   padding: 10px 20px;
   background: #ff6b6b;
   color: #fff;
