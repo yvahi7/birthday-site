@@ -927,7 +927,7 @@ body {
     padding: 20px 0px 10px 60px;
     opacity: 0;
     visibility: hidden;
-    font-size: 16px;
+    font-size: 20px;
     text-shadow: 0 0 8px #FF7882;
 }
 .boxMail .boxMail-container .card2:hover h3{
@@ -951,7 +951,7 @@ body {
     font-family: 'Dancing Script', cursive;
     padding: 0px 20px;
     text-indent: 20px;
-    font-size: 16px;
+    font-size: 20px;
     opacity: 0;
 }
 .boxMail .boxMail-container .card2:hover h2{
