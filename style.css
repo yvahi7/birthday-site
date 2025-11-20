@@ -954,12 +954,12 @@ body {
     padding: 20px 0px 10px 60px;
     opacity: 0;
     visibility: hidden;
-    font-size: 25px;
+    font-size: 20px;
     text-shadow: 0 0 8px #FF7882;
 }
 .boxMail .boxMail-container .card2:hover h3{
-    animation: texth3 3s forwards;
-    animation-delay: 2s;
+    animation: texth3 1s forwards;
+    animation-delay: 1s;
     transition: 1s;
 }
 @keyframes texth3{
