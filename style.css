@@ -977,7 +977,7 @@ body {
 .boxMail .boxMail-container .card2 .card2-content:hover .imageCute2{
     animation: cute3 1s linear infinite,
                 cute4 3s 2s forwards;
-    animation-delay: 2s;
+    animation-delay: 1s;
     transition: 1s;
 }
 @keyframes cute3{
