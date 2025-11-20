@@ -1025,8 +1025,8 @@ body {
 }
 .next-btn {
   position: absolute;
-  right: 20px;
-  bottom: 24px;
+  right: 8px;
+  bottom: 35px;
   padding: 10px 20px;
   background: #ff6b6b;
   color: #fff;
