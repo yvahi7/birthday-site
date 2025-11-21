@@ -1024,9 +1024,9 @@ body {
     z-index: 10000000000000000;
 }
 .next-btn {
-  position: relative;
+  position: absolute;
   right: 8px;
-  bottom: -40px;
+  bottom: 70px;
   padding: 10px 20px;
   background: #ff6b6b;
   color: #fff;
